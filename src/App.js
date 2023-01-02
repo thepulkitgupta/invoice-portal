@@ -18,6 +18,8 @@ import TransactionLog from './components/Ecommerce/TransactionLog';
 import SellerComission from './components/Marketplace/SellerComission'
 import SellerInvoice from './components/Marketplace/SellerInvoice'
 
+import NoMatch from './components/NoMatch'
+
 
 
 export default function App() {
@@ -36,7 +38,7 @@ export default function App() {
     <Box mt="10px" pl="10vw" pr="10vw"  component="main" flexGrow="0.95" >
       
       <Routes>
-              <Route path="/" element={<Home/>}></Route>
+              <Route index element={<Home/>}></Route>
               {/* Invoice Section  */}
               <Route path="/invoice">
                   <Route path="detailedinvoice" element={<DetailedTaxInvoice/>}></Route>
@@ -57,7 +59,7 @@ export default function App() {
                   <Route path="trxToUrbtz" element={<TrxToUrbantz/>} ></Route>
                   <Route path="reprintinvoice" element={<RePrintInvoice/>}></Route>
               </Route>
-                  
+              <Route path="*" element={<NoMatch />} />    
       </Routes>   
     </Box>  
 {/* Footer Section */}
