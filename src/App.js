@@ -38,28 +38,34 @@ export default function App() {
     <Box mt="10px" pl="10vw" pr="10vw"  component="main" flexGrow="0.95" >
       
       <Routes>
-              <Route index element={<Home/>}></Route>
+              <Route index element={<Home/>}/>
               {/* Invoice Section  */}
-              <Route path="/invoice">
-                  <Route path="detailedinvoice" element={<DetailedTaxInvoice/>}></Route>
-                  <Route path="searchdownload" element={<SearchAndDownload/>}></Route>
-                  <Route path="vatperiod" element={<VatProcessPeriod/>}></Route>
-              </Route>
-                  
-              {/* Marketplace Section */}
-              <Route path="/marketplace" >
-                   <Route path="sellerComission" element={<SellerComission/>}></Route>
-                   <Route path="sellerInvoices" element={<SellerInvoice/>}></Route>
-              </Route>
+                <Route path="/invoice">
+                    <Route path="detailedinvoice" element={<DetailedTaxInvoice/>}></Route>
+                    <Route path="searchdownload" element={<SearchAndDownload/>}></Route>
+                    <Route path="vatperiod" element={<VatProcessPeriod/>}></Route>
+                </Route>
+
+                <Route path="/marketplace" >
+                    <Route path="sellerComission" element={<SellerComission/>}></Route>
+                    <Route path="sellerInvoices" element={<SellerInvoice/>}></Route>
+                </Route>
                  
               {/* Ecommerce Section */}
-              <Route path="/ecommerce" >
-                  <Route path="webinvoice" element={<WebInvoice/>} ></Route>
-                  <Route path="transacLog" element={<TransactionLog/>}></Route>
-                  <Route path="trxToUrbtz" element={<TrxToUrbantz/>} ></Route>
-                  <Route path="reprintinvoice" element={<RePrintInvoice/>}></Route>
-              </Route>
-              <Route path="*" element={<NoMatch />} />    
+                <Route path="/ecommerce" >
+                    <Route path="webinvoice" element={<WebInvoice/>} ></Route>
+                    <Route path="transacLog" element={<TransactionLog/>}></Route>
+                    <Route path="trxToUrbtz" element={<TrxToUrbantz/>} ></Route>
+                    <Route path="reprintinvoice" element={<RePrintInvoice/>}></Route>
+                </Route>
+
+                <Route path="*" element={<NoMatch />} />    
+             
+             
+                  
+              {/* Marketplace Section */}
+             
+            
       </Routes>   
     </Box>  
 {/* Footer Section */}
