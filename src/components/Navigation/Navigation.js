@@ -54,7 +54,7 @@ export default function Navigation() {
            {/* Carrefour Logo */}
            <Stack direction="row" alignItems={'center'}>
                 <Link  component={RouterLink} to='/' underline='none'>
-                    <img src="https://i.ibb.co/ynVxrTM/Carrefour-High-Res-New.png" height="40px" alt="carrefour_logo"/> 
+                    <img src="https://i.ibb.co/hFGSp3k/invoice.png" height="40px" alt="carrefour_logo"/> 
                 </Link>
                 <Link  ml={'5px'} component={RouterLink} to='/' underline='none'>
                 <Typography  variant='h6'>DPL Portal</Typography>
